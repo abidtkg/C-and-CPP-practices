@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form data to js variable</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <input type="text" name="text" id="inputText"/>
+        <button onclick="pushData();">Show</button>
+        <p id="pText"></p>
+        
+        <script>
+            
+            // create an array
+            var myArr = [];
+            
+            function pushData()
+            {
+                // get value from the input text
+                var inputText = document.getElementById('inputText').value;
+
+                // i got the data of the input from by calling their id
+                console.log(inputText);
+                
+                // append data to the array
+                myArr.push(inputText);
+                console.log(myArr);
+            }
+            
+        </script>
+
+    </body>
+</html>
