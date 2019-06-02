@@ -45,7 +45,10 @@
 		
 <script>
     var encryptedAES = CryptoJS.AES.encrypt("What the hell", "working");
-    var decryptedBytes = CryptoJS.AES.decrypt(encryptedAES, "working");
+    document.write(encryptedAES);
+    console.log(encryptedAES);
+    var xd = "";
+    var decryptedBytes = CryptoJS.AES.decrypt("U2FsdGVkX1/JfUdHYVzKqCA+pnT6DIvtn16OLw6OFFQ=", "3");
     var plaintext = decryptedBytes.toString(CryptoJS.enc.Utf8);
 	document.write(plaintext);
 </script>

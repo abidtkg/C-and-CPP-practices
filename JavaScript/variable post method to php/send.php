@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>Send js variable to php by post method</title>
-	<script type="text/javascript" src="jquery.js"></script>
+	
 </head>
 <body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<form>
-		<input type="text" id="name" placeholder="name">
-		<input type="text" id="age" placeholder="age">
-		<input type="button" value="submit" onclick="post()">		
+		<input type="text" id="name" placeholder="Username">
+		<input type="text" id="age" placeholder="Password">
+		<input type="button" value="submit" onclick="send()">		
 	</form>
 	<div id="result">
 		
@@ -27,29 +28,35 @@
 
 
 		//creating empty array
-		var user = [];
+		//var user = [];
 
 		//creating a user arrey empty object list
-		var user1 = {}
-		var user2 = {}
+		function send(){
+			var users = []
+			var user = {}
+			var userdata = {}
 
-		//enteing the object data
-		user1.id = 1;
-		user1.fristName = "Abid";
-		user1.lsatName = "Hasan";
-		user1.phone = "01915664090";
-		//pushing this object to user array
-		user.push();
+			//enteing the object data
+			user.id = 1;
+			user.name = document.getElementById("name").value;
+			user.age = document.getElementById("age").value;
+			user.phone = '01915664090';
+			users.push(user);
 
-		//user2 object data
-		user2.id = 2;
-		user2.fristName = "fristName";
-		user2.lsatName = "lsatName";
-		user2.phone = "0015";
-		//pushing this object to user array
-		user.push();
+			userdata.time = "25 May 2019";
+			userdata.ip = "192.168.0.1";
+			users.push(userdata);
 
-		console.log(user.user1);
+
+			$.ajax({
+				url: 'validate.php',
+				method: 'post',
+				data:{users: JSON.stringify(users)},
+				success: function(res){
+				 	console.log(res)
+				 }
+			});
+		}
 
 	</script>
 </body>
