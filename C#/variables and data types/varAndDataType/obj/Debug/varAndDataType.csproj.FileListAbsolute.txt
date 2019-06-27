@@ -1,0 +1,7 @@
+C:\xampp\htdocs\Practices\C#\variables and data types\varAndDataType\bin\Debug\varAndDataType.exe.config
+C:\xampp\htdocs\Practices\C#\variables and data types\varAndDataType\bin\Debug\varAndDataType.exe
+C:\xampp\htdocs\Practices\C#\variables and data types\varAndDataType\bin\Debug\varAndDataType.pdb
+C:\xampp\htdocs\Practices\C#\variables and data types\varAndDataType\obj\Debug\varAndDataType.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Practices\C#\variables and data types\varAndDataType\obj\Debug\varAndDataType.exe
+C:\xampp\htdocs\Practices\C#\variables and data types\varAndDataType\obj\Debug\varAndDataType.pdb
+C:\xampp\htdocs\Practices\C#\variables and data types\varAndDataType\obj\Debug\varAndDataType.csprojAssemblyReference.cache
