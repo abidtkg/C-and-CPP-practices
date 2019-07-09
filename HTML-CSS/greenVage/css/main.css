@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.hero{
+	background-image: url(../img/vagitable-background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+}
+.mainHeader{
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 100px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 90px;
+}
+.subHeader{
+	color:white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 30px;
+	margin-top: 80px;
+}
+.subHeader span{
+	color:#e74c3c;
+}
