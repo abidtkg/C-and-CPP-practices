@@ -28,3 +28,15 @@ html, body {
 .subHeader span{
 	color:#e74c3c;
 }
+
+
+/*======================== BRANDING CSS START ======================*/
+.branding{
+	width: 100%;
+}
+.brands{
+	height: 200px;
+	width: 25%;
+	background-color: red;
+	float: left;
+}

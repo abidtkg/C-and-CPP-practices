@@ -1,0 +1,48 @@
+.hero{
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: top;
+}
+center{
+  display: inline-block;
+  margin-left: 30%;
+  margin-top: 150px;
+}
+.hero center h1{
+  color: white;
+  font-size: 60px;
+  font-family: 'Russo One', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  color: #e74c3c;
+  text-transform: uppercase;
+}
+.hero center h2{
+  color:white;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 30px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 20px;
+  text-transform: lowercase;
+}
+.btn{
+  height: 51px;
+  width: 180px;
+  margin-top: 20px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 34px;
+  text-transform: lowercase;
+  background-color: #2ecc71;
+  border:none;
+  color: white;
+  border-radius: 42px;
+  transition: .5s;
+}
+.btn:hover{
+  color: #e74c3c;
+  background: transparent;
+  border: 2px solid #e74c3c;
+}
