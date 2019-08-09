@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+	<script type="text/javascript">
+
+						$.ajax({
+							url: 'http://localhost/Practices/PHP%20Practices/getContent.php',
+							method: 'get',
+							data: {igData: JSON.stringify("x")},
+							success: function(res){
+                                res = JSON.parse(res);
+                                // access the object 1
+                                res = res.data;
+
+								console.log(res);
+                                document.write(res.bio);
+                                document.write('<img src="'+ res.profile_picture +'">');
+								//
+							}
+						});
+						//2035449203.1677ed0.7a9ec2a8f42b479cafd6df745cdc6d60
+		</script>
+  </body>
+</html>

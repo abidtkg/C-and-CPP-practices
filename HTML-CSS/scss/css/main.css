@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+}
+
+.hero {
+  -webkit-clip-path: polygon(65% 0, 44% 100%, 0 100%, 0 0);
+          clip-path: polygon(65% 0, 44% 100%, 0 100%, 0 0);
+  height: 100%;
+  width: 100%;
+  background-color: #34495e;
+}
+
+.hero h1 {
+  color: #f7f7f7;
+}
+/*# sourceMappingURL=main.css.map */

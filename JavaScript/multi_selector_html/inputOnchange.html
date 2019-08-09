@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+
+        $.ajax({
+            url: 'http://localhost/bdassistant/api/api.php',
+            method: 'get',
+            data: {getServices: JSON.stringify("X")},
+            success: function(res){
+                 res = res.result;
+                //console.log(x[0].serviceName);
+                lsArr = [];
+                for(ls of res){
+                  lsArr.push(ls.serviceName);
+                  //console.log(ls.serviceName);
+                }
+                //console.log(lsArr);
+                //window.lsArr;
+            }
+        });
+
+        
+
+
+        console.log(lsArr);
+        //  for(list of lsArr){
+        //  console.log(list);
+        // }
+
+
+        //console.log(lsArr);
+        // var yearStart = 2000;
+        // var yearEnd = 2040;
+
+        // var arr = [];
+
+        // while(yearStart < yearEnd+1){
+        //   arr.push(yearStart++);
+        // }
+        // console.log(arr);
+        
+        
+        var c1 = ["Facebook", "Twitter"];
+        var c2 = ["Gmail", "WebMail", "Outlook", "Hotmail"];
+        var c3 = ["DBBL", "NexusPay", "MasterCard"]
+        var c4 = ["NONE"]
+        var x = [c1, c2, c3, c4];
+
+      function onCountryChanged(s) {
+        var cities = document.getElementById("accCatagory");
+        if (s.value > 0) {
+
+          var v = "";
+          for (var i = 0; i < x[s.value - 1].length; i++) {
+            v += "<option value='" + x[s.value - 1][i] + "'>" + x[s.value - 1][i] + "</option>"
+          }
+          cities.innerHTML = v;
+        } else {
+          cities.innerHTML = "";
+          }
+      }
+      </script>
+      
+      <label for="accType">Account Type</label>
+        <select id="accType" name="accType" onchange="onCountryChanged(this)">
+          <option disabled="" selected="" value="0">Account type</option>
+          <option value="1">Social</option>
+          <option value="2">Email</option>
+          <option disabled="" value="3">Bank / Card</option>
+          <option disabled="" value="4">Other</option>
+      </select>
+      <div class="invalid-feedback">
+        Select please
+      </div>
+    </div>
+    <div class="col-md-12 mb-3">
+      <label for="socialSite">Account Category</label>
+      <select name="accCatagory" class="form-control" id="accCatagory" >
+
+      </select>
+</body>
+</html>
