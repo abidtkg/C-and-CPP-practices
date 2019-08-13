@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+      //using $.when().done();
+      $(document).ready(function() {
+        function call_ajax() {
+          $.ajax({
+            url: "http://localhost/api/api.php",
+            method: "POST"
+            //success: the_function
+          });
+        }
+        $.when(call_ajax()).done(function(response) {
+          console.log(response);
+        });
+      });
+      //   function zero() {
+      //     return $.ajax({
+      //       url: "http://localhost/api/api.php",
+      //       method: "GET",
+      //       data: { test: JSON.stringify("X") },
+      //       success: function(res) {
+      //         let suc = JSON.parse(res);
+      //         //console.log(suc);
+      //       }
+      //     });
+      //   }
+      //   console.log(zero());
+    </script>
+  </body>
+</html>
