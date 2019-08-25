@@ -1,3 +1,7 @@
-birth_year = int(input("Enter your age:"))
-age = birth_year - 2019
-print(age)
+full_name = input("Enter your name: ")
+birth_year = int(input("Enter your age: "))
+print(f'Hi, {full_name}. How are you today?')
+feeling = input("Type: ")
+print(f'Hey {full_name}, your birth year is {birth_year} ? is it true?')
+age_confirm = input("y/n? :")
+print(f'you are {feeling} tody so, it\'s a good chance for do it')
