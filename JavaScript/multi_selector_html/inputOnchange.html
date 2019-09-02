@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+<script>
+  $.ajax({
+    url: 'http://localhost/bdassistant/beta/inc/process.php',
+    method: 'post',
+    data: {en_list: JSON.stringify("x")},
+    success: function(res){
+     // res = JSON.parse(res);
+      console.log(res);
+    }
+  });
+</script>
+
+
+
     <script>
 
-        $.ajax({
-            url: 'http://localhost/bdassistant/api/api.php',
-            method: 'get',
-            data: {getServices: JSON.stringify("X")},
-            success: function(res){
-                 res = res.result;
-                //console.log(x[0].serviceName);
-                lsArr = [];
-                for(ls of res){
-                  lsArr.push(ls.serviceName);
+       // $.ajax({
+         //   url: 'http://localhost/bdassistant/api/api.php',
+          //  method: 'get',
+           // data: {getServices: JSON.stringify("X")},
+           // success: function(res){
+             //    res = res.result;
+              //console.log(x[0].serviceName);
+               // lsArr = [];
+               // for(ls of res){
+                //  lsArr.push(ls.serviceName);
                   //console.log(ls.serviceName);
-                }
+               // }
                 //console.log(lsArr);
                 //window.lsArr;
-            }
-        });
+           // }
+       // });
 
         
 
 
-        console.log(lsArr);
+        // console.log(lsArr);
         //  for(list of lsArr){
         //  console.log(list);
         // }
