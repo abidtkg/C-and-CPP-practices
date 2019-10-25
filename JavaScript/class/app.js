@@ -1,14 +1,13 @@
-// main triangle funcntion
-function triangle(angle1, angle2, angle3) {
-  let area = angle1 + angle2 + angle3;
-
-  // condition start
-  if (area > 180) {
-    return ture;
-  } else {
-    return false;
+let user = [
+  {
+    name: "Sajol",
+    age: 18
+  },
+  {
+    name: "Abid",
+    age: 18
   }
+];
+for (ls of user) {
+  console.log(ls.name);
 }
-
-// run program with input
-console.log(triangle(10, 40, 50));
