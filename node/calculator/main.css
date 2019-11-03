@@ -1,0 +1,15 @@
+input {
+  border: 1px solid red;
+  border-radius: 10px;
+}
+button {
+  color: white;
+  background-color: rgb(64, 122, 6);
+  border: none;
+  height: 25px;
+  widows: 50px;
+  border-radius: 10px;
+}
+h1 {
+  color: red;
+}

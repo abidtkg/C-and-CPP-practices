@@ -1,27 +1,24 @@
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+require("dotenv/config");
+
+// Middleware for parsing json data
+app.use(bodyParser.json());
 
 // Router
 const rootRoute = require("./routes/root");
-const postRoutes = require("./routes/posts");
-
+const userRoute = require("./routes/user");
+const postRoute = require("./routes/posts");
 // Use Middleware for router
 app.use("/", rootRoute);
-app.use("/posts", postRoutes);
+app.use("/user", userRoute);
+app.use("/post", postRoute);
 
 // mongoDB connection
-
-const MongoClient = require("mongodb").MongoClient;
-const uri =
-  "mongodb+srv://root:abcd1234@users-iream.gcp.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  console.log("Connected with mongoServer");
-
-  client.close();
-});
-
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, err =>
+  console.log("Connected To MongoDB")
+);
 //listen to port
 app.listen(3000);
